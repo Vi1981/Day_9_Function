@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gọi hàm theo 1 dk nào đó</title>
+</head>
+
+<body>
+    <script>
+        function checkHealth(reply) {
+            let input = "";
+            if (reply) {
+                input = "I am fine. Thank you";
+            } else {
+                input = "Not so good. Take care";
+            }
+            return input;
+        }
+        let checkResult = confirm("How are you?");
+        let theReply = checkHealth(checkResult);
+        document.write(theReply);
+
+       </script>
+</body>
+
+</html>
