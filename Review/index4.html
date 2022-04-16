@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chu vi,dien tich hinh tron</title>
+</head>
+
+<body>
+    <script>
+        const PI = 3.14;
+        function calChuvi(x) {
+            return 2 * x * PI;
+        }
+        function calDientich(x) {
+            return x * x * PI;
+        }
+        let bankinh = parseFloat(prompt("Nhap ban kinh hinh tron"));
+        document.write("Chu vi la " + calChuvi(bankinh));
+        document.write("Dien tich la " + calDientich(bankinh));
+    </script>
+</body>
+
+</html>

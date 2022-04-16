@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feet Meter Converter</title>
+</head>
+
+<body>
+    <p>Nhập nhiệt độ F</p>
+    <input type="number" id="feetTemp" onkeyup="inputFeet(this.value)">
+    <p>Meter Temperatue is <span id="convertToMeter"></span></p>
+    <br />
+
+    <p>Nhập nhiệt độ C</p>
+    <input type="number" id="meterTemp" onkeyup="inputMeter(this.value)">
+    <p>Feet Temperatue is <span id="convertToFeet"></span></p>
+
+    <script>
+        function inputFeet(tempF) {
+            let result = parseFloat(tempF);
+            document.getElementById("convertToMeter").innerHTML = result * 0.305;
+        }
+
+        function inputMeter(tempF) {
+            let result = parseFloat(tempF);
+            document.getElementById("convertToFeet").innerHTML = result * 3.279;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Prime Number</title>
+</head>
+
+<body>
+    <script>
+        function isPrime(num) {
+            var check = true;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+            return check;
+        }
+        // let result = parseInt(prompt("Input a number to check:"));
+        // if (isPrime(result)==true) {
+        //     document.write(result + " is a Prime Number");
+        // } else {
+        //     document.write(result + " is not a Prime Number");
+        // }
+
+
+        let n = 2;
+        do {
+            if (isPrime(n) == true) {
+                document.write(n + ", ");
+            }
+            n++;
+        } while (n < 10000);
+
+
+    </script>
+</body>
+
+</html>

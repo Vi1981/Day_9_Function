@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check a number in Array</title>
+</head>
+
+<body>
+    <script>
+        let inputNumArray = prompt("Nhập vào 1 dãy số");
+        let numArr = inputNumArray.split("");
+        document.write(numArr + "<br/>");
+
+        function checkNum(c) {
+            let count = 0;
+            for (let i = 0; i < numArr.length; i++) {
+                              if (numArr[i] == c) {
+                    count++
+                }
+            }
+            if (count !== 0) {
+                document.write(c + " has " + count + " times in Array")
+            } else {
+                return -1;
+            }
+        }
+        let inputNum = parseInt(prompt("Input a certain number:"));
+        checkNum(inputNum);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check ky tu trong array</title>
+</head>
+
+<body>
+    <script>
+        const EMPTY_STRING = "";
+        let array1 = ["Polaris", " Aldebaran", "Deneb", "Vega", " Altair", "Dubhe", "Regulus"];
+        let array2 = ["Ursa_Minor", "Tarurus", " Cygnus", "Lyra", " Aquila", "Ursa_Major", "Leo"];
+        function findStar(starName) {
+            for (let i in array1) {
+                if (array1[i].toLowerCase() == starName.toLowerCase()) {
+                    return array2[i];
+                }
+            }
+            return EMPTY_STRING;
+        }
+        let inputStar = prompt("Input a star name:");
+        let checkStar = findStar(inputStar);
+        if (checkStar != EMPTY_STRING) {
+            document.write("Chom sao cua " + inputStar + " la " + checkStar);
+        } else {
+            document.write("Khong tim thay chom sao voi ten " + inputStar);
+        }
+
+    </script>
+</body>
+
+</html>
